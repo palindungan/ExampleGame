@@ -13,8 +13,9 @@ public class Chest : Collectable
         {
             base.OnCollect();
             GetComponent<SpriteRenderer>().sprite = emtySprite;
-            Debug.Log("Grant " + pesosAmount + " pesos!");
+            // Debug.Log("+" + pesosAmount + " pesos!");
+            string msg = "+" + pesosAmount + " pesos!";
+            GameManager.instance.ShowText(msg, 25, Color.yellow, transform.position, Vector3.up * 25, 1.0f);
         }
-
     }
 }
