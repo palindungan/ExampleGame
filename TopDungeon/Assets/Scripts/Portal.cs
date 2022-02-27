@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Portal : Collidable
 {
@@ -10,7 +11,7 @@ public class Portal : Collidable
         {
             // Teleport the player
             string sceneName = sceneNames[Random.Range(0, sceneNames.Length)];
-            UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
+            SceneManager.LoadScene(sceneName);
         }
     }
 }
